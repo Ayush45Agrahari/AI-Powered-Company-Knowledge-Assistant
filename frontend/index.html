@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Chatbot</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-slate-950 text-white">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-slate-900/90 border-b border-white/10 backdrop-blur-sm">
+            <div class="container mx-auto max-w-3xl px-4 py-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <h1 class="text-3xl font-semibold tracking-tight">Company Chatbot</h1>
+                    <p class="mt-1 text-sm text-slate-400">Ask anything and get polished assistant responses in a modern chat interface.</p>
+                </div>
+                <button id="clear-chat" class="inline-flex items-center justify-center rounded-full bg-slate-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-600">Clear chat</button>
+            </div>
+        </header>
+
+        <main class="flex-1 overflow-hidden">
+            <div class="container mx-auto max-w-3xl px-4 py-5">
+                <div class="mb-5 rounded-3xl border border-white/10 bg-slate-900/80 p-5 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.9)]">
+                    <div class="grid gap-3 sm:grid-cols-[1fr_auto]">
+                        <input id="companyId" type="text" placeholder="Company ID / tenant" class="w-full rounded-3xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20" />
+                        <button id="upload-btn" class="rounded-3xl bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400">Upload PDF</button>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block text-sm text-slate-400 mb-2">Select PDF to index for this company</label>
+                        <input id="pdf-file" type="file" accept="application/pdf" class="w-full rounded-3xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white" />
+                    </div>
+                </div>
+                <div id="messages" class="flex flex-col gap-4 overflow-y-auto rounded-3xl border border-white/10 bg-slate-950/90 p-5 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.9)] min-h-[60vh] max-h-[75vh]"></div>
+            </div>
+        </main>
+
+        <footer class="sticky bottom-0 border-t border-white/10 bg-slate-900/95 backdrop-blur-md">
+            <div class="container mx-auto max-w-3xl px-4 py-4">
+                <div class="grid gap-3 sm:grid-cols-[1fr_auto]">
+                    <textarea id="input" rows="2" class="w-full resize-none rounded-3xl border border-white/10 bg-slate-900 px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20" placeholder="Type your message..." autocomplete="off"></textarea>
+                    <button id="ask" class="rounded-3xl bg-sky-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-sky-400">Send</button>
+                </div>
+                <p class="mt-3 text-xs text-slate-500">Press Enter to send. Use Shift+Enter for a newline.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
