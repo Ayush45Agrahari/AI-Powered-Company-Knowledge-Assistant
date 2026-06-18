@@ -46,7 +46,7 @@ company-chatbot/
 
 Clone the repository:
 
-git clone https://github.com/YOUR_USERNAME/company-chatbot.git
+git clone https://github.com/YOUR_USERNAME/AI-Powered-Company-Knowledge-Assistant
 
 cd company-chatbot
 
