@@ -1,8 +1,8 @@
-# Company Chatbot (RAG)
+# AI-Powered-Company-Knowledge-Assistant
 
 ## Overview
 
-Company Chatbot is a Retrieval-Augmented Generation (RAG) application that allows users to ask questions from company documents (PDFs). The chatbot retrieves relevant information from stored document embeddings and generates accurate responses using Llama 3.3 through Groq.
+AI-Powered-Company-Knowledge-Assistant is a Retrieval-Augmented Generation (RAG) application that allows users to ask questions from company documents (PDFs). The chatbot retrieves relevant information from stored document embeddings and generates accurate responses using Llama 3.3 through Groq.
 
 ## Features
 
